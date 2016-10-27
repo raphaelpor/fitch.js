@@ -40,6 +40,14 @@ server.route({
 })
 
 server.route({
+  method: 'PATCH',
+  path: `${path}/{id}`,
+  handler: function(request, reply) {
+    return reply(request.payload)
+  }
+})
+
+server.route({
   method: 'DELETE',
   path: `${path}/{id}`,
   handler: function(request, reply) {
