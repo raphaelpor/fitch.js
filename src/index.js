@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
 
-module.exports = {
-  API_URL: 'http://localhost:8000/',
+const config = require('./config');
 
+module.exports = {
   get(url, req) {
     return this.request('GET', url, req)
   },
@@ -24,25 +24,9 @@ module.exports = {
   },
 
   request(method, url, req) {
-    const config = this.config(method, req)
-    const path = this.API_URL + url
-    return fetch(path, config).then(this.check)
-  },
-
-  config(method, {
-    body = '',
-    cache = 'default',
-    headers = { "Content-Type": "application/json" },
-    mode = 'cors'
-  } = {}) {
-    const obj = {
-      method,
-      body: JSON.stringify(body),
-      cache,
-      headers,
-      mode
-    }
-    return obj
+    const params = config.create(method, req)
+    const path = config.API_URL + url
+    return fetch(path, params).then(this.check)
   },
 
   check(resp) {
