@@ -1,0 +1,19 @@
+{
+  "name": "fetch-test",
+  "version": "1.0.0",
+  "description": "Test using fetch API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelpor/fetch-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaelpor/fetch-test/issues"
+  },
+  "homepage": "https://github.com/raphaelpor/fetch-test#readme"
+}
