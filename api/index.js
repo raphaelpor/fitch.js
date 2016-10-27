@@ -12,10 +12,14 @@ server.connection({
 // Add the route
 server.route({
     method: 'GET',
-    path:'/hello',
+    path:'/cats',
     handler: function (request, reply) {
-
-        return reply('hello world');
+        const cats = [
+          { name: 'Grumpy cat' },
+          { name: 'Happy cat' },
+        ];
+        
+        return reply(cats);
     }
 });
 
