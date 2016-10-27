@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/raphaelpor/fetch-test/issues"
   },
-  "homepage": "https://github.com/raphaelpor/fetch-test#readme"
+  "homepage": "https://github.com/raphaelpor/fetch-test#readme",
+  "dependencies": {
+    "hapi": "^15.2.0"
+  }
 }
