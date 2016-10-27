@@ -15,6 +15,11 @@ fetch.put('cats/1', { name: 'Updated cat' }).then(resp =>
   console.log('PUT >>>', resp)
 ).catch(fetch.error)
 
+// PATCH
+fetch.patch('cats/2', { name: 'Updated cat' }).then(resp =>
+  console.log('PATCH >>>', resp)
+).catch(fetch.error)
+
 // DELETE
 fetch.delete('cats/2').then(resp =>
   console.log('DELETE >>>', resp)

@@ -15,6 +15,10 @@ module.exports = {
     return this.request('PUT', url, body)
   },
 
+  patch(url, body) {
+    return this.request('PATCH', url, body)
+  },
+
   delete(url) {
     return this.request('DELETE', url)
   },
