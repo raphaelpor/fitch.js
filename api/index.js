@@ -39,6 +39,14 @@ server.route({
   }
 })
 
+server.route({
+  method: 'DELETE',
+  path: `${path}/{id}`,
+  handler: function(request, reply) {
+    return reply({ response: 'ok' })
+  }
+})
+
 // Start the server
 server.start(err => {
   if (err) {
