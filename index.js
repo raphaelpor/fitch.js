@@ -1,5 +1,5 @@
 const fetch = require('./fetchService')
 
-fetch.get('raphaelpor').then(resp =>
-  console.log(resp.name)
+fetch.get('cats').then(resp =>
+  console.log(resp)
 ).catch(fetch.error)
