@@ -1,22 +1,30 @@
 const fetch = require('./fetchService')
 
+const reqUpdate = {
+  body: { name: 'Updated cat' },
+}
+
+const reqPost = {
+  body: { name: 'New cat' },
+}
+
 // GET
 fetch.get('cats').then(resp =>
   console.log('GET >>>', resp)
 ).catch(fetch.error)
 
 // POST
-fetch.post('cats/new/', { name: 'New cat' }).then(resp =>
+fetch.post('cats/new/', reqPost).then(resp =>
   console.log('POST >>>', resp)
 ).catch(fetch.error)
 
 // PUT
-fetch.put('cats/1', { name: 'Updated cat' }).then(resp =>
+fetch.put('cats/1', reqUpdate).then(resp =>
   console.log('PUT >>>', resp)
 ).catch(fetch.error)
 
 // PATCH
-fetch.patch('cats/2', { name: 'Updated cat' }).then(resp =>
+fetch.patch('cats/2', reqUpdate).then(resp =>
   console.log('PATCH >>>', resp)
 ).catch(fetch.error)
 

@@ -3,36 +3,44 @@ const fetch = require('node-fetch');
 module.exports = {
   API_URL: 'http://localhost:8000/',
 
-  get(url) {
-    return this.request('GET', url)
+  get(url, req) {
+    return this.request('GET', url, req)
   },
 
-  post(url, body) {
-    return this.request('POST', url, body)
+  post(url, req) {
+    return this.request('POST', url, req)
   },
 
-  put(url, body) {
-    return this.request('PUT', url, body)
+  put(url, req) {
+    return this.request('PUT', url, req)
   },
 
-  patch(url, body) {
-    return this.request('PATCH', url, body)
+  patch(url, req) {
+    return this.request('PATCH', url, req)
   },
 
-  delete(url) {
-    return this.request('DELETE', url)
+  delete(url, req) {
+    return this.request('DELETE', url, req)
   },
 
-  request(method, url, body) {
-    const config = this.config(method, JSON.stringify(body))
-    return fetch(this.API_URL + url, config).then(this.check)
+  request(method, url, req) {
+    const config = this.config(method, req)
+    const path = this.API_URL + url
+    return fetch(path, config).then(this.check)
   },
 
-  config(method, body) {
+  config(method, {
+    body = '',
+    cache = 'default',
+    headers = { "Content-Type": "application/json" },
+    mode = 'cors'
+  } = {}) {
     const obj = {
       method,
-      body,
-      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(body),
+      cache,
+      headers,
+      mode
     }
     return obj
   },
