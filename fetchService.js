@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 module.exports = {
-  API_URL: 'https://api.github.com/users/',
+  API_URL: 'http://localhost:8000/',
 
   get(url) {
     return this.request('GET', url)
@@ -34,10 +34,13 @@ module.exports = {
   },
 
   check(resp) {
-    return resp.ok && resp.json()
+    if (resp.ok) {
+      return resp.json()
+    }
+    throw `${resp.status} - ${resp.statusText}.`
   },
 
   error(err) {
-    console.log(err);
+    console.log('Error >', err);
   },
 }
