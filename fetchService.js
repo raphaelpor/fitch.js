@@ -8,7 +8,7 @@ module.exports = {
   },
 
   post(url, body) {
-    return this.request('POST', url, body)
+    return this.request('POST', url, JSON.stringify(body))
   },
 
   put(url) {
