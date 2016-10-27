@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 module.exports = {
   API_URL: 'https://api.github.com/users/',
 

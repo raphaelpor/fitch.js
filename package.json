@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/raphaelpor/fetch-test#readme",
   "dependencies": {
-    "hapi": "^15.2.0"
+    "hapi": "^15.2.0",
+    "node-fetch": "^1.6.3"
   }
 }
