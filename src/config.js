@@ -1,6 +1,4 @@
 module.exports = {
-  API_URL: 'http://localhost:8000/',
-
   create(method, {
     body = '',
     cache = 'default',

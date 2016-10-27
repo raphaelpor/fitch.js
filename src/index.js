@@ -25,8 +25,7 @@ module.exports = {
 
   request(method, url, req) {
     const params = config.create(method, req)
-    const path = config.API_URL + url
-    return fetch(path, params).then(this.check)
+    return fetch(url, params).then(this.check)
   },
 
   check(resp) {
