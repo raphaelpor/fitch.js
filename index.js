@@ -1,4 +1,4 @@
-const fetch = require('./fetch')
+const fetch = require('./fetchService')
 
 fetch.get('raphaelpor').then(resp =>
   console.log(resp.name)
