@@ -9,7 +9,6 @@ server.connection({
   port: 8000
 });
 
-// Add the route
 server.route({
   method: 'GET',
   path:'/cats',
@@ -23,7 +22,6 @@ server.route({
   }
 });
 
-// Add the route
 server.route({
   method: 'POST',
   path:'/cats/new/',
@@ -32,11 +30,18 @@ server.route({
   }
 });
 
-// Start the server
-server.start((err) => {
+server.route({
+  method: 'PUT',
+  path:'/cats/{id}',
+  handler: function (request, reply) {
+    return reply(request.payload);
+  }
+});
 
+// Start the server
+server.start(err => {
   if (err) {
     throw err;
   }
-  console.log('Server running at:', server.info.uri);
+  console.log(`Server running at: ${server.info.uri}`);
 });
