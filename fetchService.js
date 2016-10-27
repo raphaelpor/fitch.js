@@ -8,11 +8,11 @@ module.exports = {
   },
 
   post(url, body) {
-    return this.request('POST', url, JSON.stringify(body))
+    return this.request('POST', url, body)
   },
 
-  put(url) {
-    return this.request('PUT', url)
+  put(url, body) {
+    return this.request('PUT', url, body)
   },
 
   delete(url) {
@@ -20,7 +20,7 @@ module.exports = {
   },
 
   request(method, url, body) {
-    const config = this.config(method, body)
+    const config = this.config(method, JSON.stringify(body))
     return fetch(this.API_URL + url, config).then(this.check)
   },
 
