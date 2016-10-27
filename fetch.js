@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   API_URL: 'https://api.github.com/users/',
 
   get(url) {
