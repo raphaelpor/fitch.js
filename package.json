@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./api/index.js",
     "lint": "eslint src",
-    "test": "ava",
+    "test": "ava ./tests/*",
     "watch:test": "npm test -- -w",
     "examples": "node ./examples/index.js"
   },
