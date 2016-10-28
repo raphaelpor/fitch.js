@@ -8,6 +8,7 @@
     "lint": "eslint src",
     "test": "ava ./tests/*",
     "watch:test": "npm test -- -w",
+    "coverage": "nyc ava ./tests/*",
     "examples": "node ./examples/index.js"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
-    "hapi": "^15.2.0"
+    "hapi": "^15.2.0",
+    "nyc": "^8.3.2"
   }
 }
