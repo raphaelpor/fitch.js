@@ -1,5 +1,5 @@
 {
-  "name": "fetch-test",
+  "name": "fitch",
   "version": "1.0.0",
   "description": "Test using fetch API",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raphaelpor/fetch-test.git"
+    "url": "git+https://github.com/raphaelpor/fitch.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/raphaelpor/fetch-test/issues"
+    "url": "https://github.com/raphaelpor/fitch/issues"
   },
-  "homepage": "https://github.com/raphaelpor/fetch-test#readme",
+  "homepage": "https://github.com/raphaelpor/fitch#readme",
   "dependencies": {
     "hapi": "^15.2.0",
     "node-fetch": "^1.6.3"

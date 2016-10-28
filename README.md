@@ -1,7 +1,7 @@
-# fetch-test
-Test using fetch API
+# fitch.js
+A lightweight Promise based HTTP client, using Fetch API.
 
-## Run
+## Run local
 ```sh
 npm i
 npm start # run local server
