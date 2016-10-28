@@ -1,4 +1,8 @@
-const fetch = require('node-fetch');
+// Verify if is running in browser
+let fetch;
+if (typeof window === 'undefined') {
+  fetch = require('node-fetch');
+}
 
 const config = require('./config');
 
