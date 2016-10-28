@@ -1,8 +1,7 @@
 // Verify if is running in browser
-let fetch;
-if (typeof window === 'undefined') {
-  fetch = require('node-fetch');
-}
+const nodeFetch = require('node-fetch');
+
+const f = typeof window === 'undefined' ? nodeFetch : fetch
 
 const config = require('./config');
 
@@ -29,14 +28,14 @@ module.exports = {
 
   request(method, url, req) {
     const params = config.create(method, req)
-    return fetch(url, params).then(this.check)
+    return f(url, params).then(this.check)
   },
 
   check(resp) {
     if (resp.ok) {
       return resp.json()
     }
-    throw `${resp.status} - ${resp.statusText}.`
+    throw new Error(`${resp.status} - ${resp.statusText}.`)
   },
 
   error(err) {

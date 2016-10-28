@@ -4,16 +4,16 @@ module.exports = {
     {
       body = '',
       cache = 'default',
-      headers = { "Content-Type": "application/json" },
-      mode = 'cors'
+      headers = { 'Content-Type': 'application/json' },
+      mode = 'cors',
     } = {}
   ) {
-    return  {
+    return {
       method,
       body: JSON.stringify(body),
       cache,
       headers,
-      mode
+      mode,
     }
   },
 }
