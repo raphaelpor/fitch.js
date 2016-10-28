@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/raphaelpor/fitch#readme",
   "dependencies": {
-    "hapi": "^15.2.0",
     "node-fetch": "^1.6.3"
+  },
+  "devDependencies": {
+    "hapi": "^15.2.0"
   }
 }
