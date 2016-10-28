@@ -14,16 +14,12 @@ npm i --save fitch
 
 ```js
 import fitch from 'fitch'
-// or
-import { get } from 'fitch'
 ```
 
 **CommonJS:**
 
 ```js
 const fitch = require('fitch')
-// or
-const get = require('fitch').get
 ```
 
 **UMD:**
