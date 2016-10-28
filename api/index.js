@@ -1,62 +1,60 @@
-'use strict';
-
-const Hapi = require('hapi')
+const Hapi = require('hapi') // eslint-disable-line
 
 const server = new Hapi.Server()
 server.connection({
   host: 'localhost',
-  port: 8000
+  port: 8000,
 })
 
 const path = '/cats'
 
 server.route({
   method: 'GET',
-  path: path,
-  handler: function(request, reply) {
+  path,
+  handler(request, reply) {
     const cats = [
       { name: 'Grumpy cat' },
       { name: 'Happy cat' },
     ]
 
     return reply(cats)
-  }
+  },
 })
 
 server.route({
   method: 'POST',
   path: `${path}/new/`,
-  handler: function(request, reply) {
+  handler(request, reply) {
     return reply(request.payload)
-  }
+  },
 })
 
 server.route({
   method: 'PUT',
   path: `${path}/{id}`,
-  handler: function(request, reply) {
+  handler(request, reply) {
     return reply(request.payload)
-  }
+  },
 })
 
 server.route({
   method: 'PATCH',
   path: `${path}/{id}`,
-  handler: function(request, reply) {
+  handler(request, reply) {
     return reply(request.payload)
-  }
+  },
 })
 
 server.route({
   method: 'DELETE',
   path: `${path}/{id}`,
-  handler: function(request, reply) {
+  handler(request, reply) {
     return reply({ response: 'ok' })
-  }
+  },
 })
 
 // Start the server
-server.start(err => {
+server.start((err) => {
   if (err) {
     throw err
   }
