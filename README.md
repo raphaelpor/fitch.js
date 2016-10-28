@@ -1,4 +1,5 @@
-# fitch.js
+![Fitch.js](./assets/fitch-mini.png)
+# Fitch.js
 A lightweight Promise based HTTP client, using Fetch API.
 
 ## Run local
