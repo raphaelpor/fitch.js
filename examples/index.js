@@ -1,4 +1,4 @@
-const fetch = require('../src')
+const fitch = require('../src')
 
 const baseUrl = 'http://localhost:8000/cats'
 
@@ -11,26 +11,26 @@ const reqPost = {
 }
 
 // GET
-fetch.get(baseUrl).then(resp =>
+fitch.get(baseUrl).then(resp =>
   console.log('GET\t>>>', resp)
-).catch(fetch.error)
+).catch(fitch.error)
 
 // POST
-fetch.post(`${baseUrl}/new/`, reqPost).then(resp =>
+fitch.post(`${baseUrl}/new/`, reqPost).then(resp =>
   console.log('POST\t>>>', resp)
-).catch(fetch.error)
+).catch(fitch.error)
 
 // PUT
-fetch.put(`${baseUrl}/1`, reqUpdate).then(resp =>
+fitch.put(`${baseUrl}/1`, reqUpdate).then(resp =>
   console.log('PUT\t>>>', resp)
-).catch(fetch.error)
+).catch(fitch.error)
 
 // PATCH
-fetch.patch(`${baseUrl}/2`, reqUpdate).then(resp =>
+fitch.patch(`${baseUrl}/2`, reqUpdate).then(resp =>
   console.log('PATCH\t>>>', resp)
-).catch(fetch.error)
+).catch(fitch.error)
 
 // DELETE
-fetch.delete(`${baseUrl}/2`).then(resp =>
+fitch.delete(`${baseUrl}/2`).then(resp =>
   console.log('DELETE\t>>>', resp)
-).catch(fetch.error)
+).catch(fitch.error)
