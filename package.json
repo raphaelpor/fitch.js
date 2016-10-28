@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node ./api/index.js",
     "lint": "eslint src",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava ./tests/*",
+    "watch:test": "npm test -- -w",
+    "coverage": "nyc ava ./tests/*",
     "examples": "node ./examples/index.js"
   },
   "repository": {
@@ -23,11 +25,13 @@
     "node-fetch": "^1.6.3"
   },
   "devDependencies": {
+    "ava": "^0.16.0",
     "eslint": "^3.8.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
-    "hapi": "^15.2.0"
+    "hapi": "^15.2.0",
+    "nyc": "^8.3.2"
   }
 }
