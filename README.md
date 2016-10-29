@@ -73,6 +73,12 @@ fitch.get(apiUrl)
 
 ## Use with custom configuration
 ```js
+const config = {
+  cache = 'no-store',
+  headers = { 'Content-Type': 'application/json' },
+  mode = 'no-cors',
+}
+
 fitch.get(apiUrl, config)
   .then(data => console.log(data))
 ```
