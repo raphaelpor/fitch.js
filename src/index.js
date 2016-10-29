@@ -39,6 +39,8 @@ module.exports = {
   },
 
   error(err) {
-    console.log('Error >', err);
+    if (err) {
+      console.log('Error >', err);
+    }
   },
 };
