@@ -11,6 +11,8 @@ const reqPost = {
   body: { name: 'New cat' },
 }
 
+fitch.request = () => Promise.resolve({ body: 'test' });
+
 test('method: get', t =>
   fitch.get(baseUrl)
     .then(data => t.is(typeof data, 'object', 'data is a object'))
