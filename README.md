@@ -93,5 +93,5 @@ npm start # run local server
 npm run watch:test # watch files inside src/ and tests/
 npm run examples # run examples
 ```
-It is important that the code can be tested and pass in linter check.
+Note: Your code must be tested and pass in linter check.
 You can verify your code with ESLint, using `npm run lint`.
