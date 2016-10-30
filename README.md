@@ -2,6 +2,8 @@
 # Fitch.js
 A lightweight Promise based HTTP client, using Fetch API.
 
+[![Build Status](https://travis-ci.org/raphaelpor/fitch.js.svg?branch=master)](https://travis-ci.org/raphaelpor/fitch.js)
+
 ## Get started
 ### Install
 ```sh
