@@ -26,9 +26,10 @@ module.exports = {
     return this.request('DELETE', url, req);
   },
 
-  request(method, url, req) {
+  request(method, url, req = {}) {
     const params = config.create(method, req);
-    return f(url, params).then(this.check);
+    const call = f(url, params);
+    return req.raw ? call : call.then(this.check);
   },
 
   check(resp) {

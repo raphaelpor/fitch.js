@@ -15,6 +15,11 @@ fitch.get(baseUrl).then(resp =>
   console.log('GET\t>>>', resp)
 ).catch(fitch.error);
 
+// GET raw output
+fitch.get(baseUrl, { raw: true }).then(resp =>
+  console.log('GET\t>>>', resp)
+).catch(fitch.error);
+
 // POST
 fitch.post(`${baseUrl}/new/`, reqPost).then(resp =>
   console.log('POST\t>>>', resp)

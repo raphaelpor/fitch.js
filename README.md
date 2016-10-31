@@ -79,6 +79,7 @@ const config = {
   cache = 'no-store',
   headers = { 'Content-Type': 'application/json' },
   mode = 'no-cors',
+  raw = true, // return the raw output of fetch()
 }
 
 fitch.get(apiUrl, config)
