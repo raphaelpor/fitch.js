@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raphaelpor/fitch.git"
+    "url": "git+https://github.com/raphaelpor/fitch.js.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/raphaelpor/fitch/issues"
+    "url": "https://github.com/raphaelpor/fitch.js/issues"
   },
-  "homepage": "https://github.com/raphaelpor/fitch#readme",
+  "homepage": "https://github.com/raphaelpor/fitch.js#readme",
   "dependencies": {
     "es6-promise": "^4.0.5",
     "isomorphic-fetch": "^2.2.1"
