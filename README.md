@@ -80,6 +80,10 @@ const config = {
   headers = { 'Content-Type': 'application/json' },
   mode = 'no-cors',
   raw = true, // return the raw output of fetch()
+  params: { // transform to '?test1=test-1&test2=test-2'
+    test1: 'test-1',
+    test2: 'test-2',
+  },
 }
 
 fitch.get(apiUrl, config)
