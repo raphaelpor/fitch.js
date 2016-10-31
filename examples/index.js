@@ -2,6 +2,13 @@ const fitch = require('../src');
 
 const baseUrl = 'http://localhost:8000/cats';
 
+const reqGet = {
+  params: {
+    test1: 'test-1',
+    test2: 'test-2',
+  },
+};
+
 const reqUpdate = {
   body: { name: 'Updated cat' },
 };
@@ -12,6 +19,11 @@ const reqPost = {
 
 // GET
 fitch.get(baseUrl).then(resp =>
+  console.log('GET\t>>>', resp)
+).catch(fitch.error);
+
+// GET with params
+fitch.get(baseUrl, reqGet).then(resp =>
   console.log('GET\t>>>', resp)
 ).catch(fitch.error);
 
