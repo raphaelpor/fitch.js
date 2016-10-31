@@ -2,6 +2,7 @@ require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
 const config = require('./config');
+const params = require('./params');
 
 module.exports = {
   get(url, req) {
@@ -25,8 +26,12 @@ module.exports = {
   },
 
   request(method, url, req = {}) {
-    const params = config.create(method, req);
-    const call = fetch(url, params);
+    let paramsEncoded = '';
+    if (req.params) {
+      paramsEncoded = params.transform(req.params);
+    }
+    const configObj = config.create(method, req);
+    const call = fetch(url + paramsEncoded, configObj);
     return req.raw ? call : call.then(this.check);
   },
 
