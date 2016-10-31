@@ -8,12 +8,13 @@ module.exports = {
       mode = 'cors',
     } = {}
   ) {
+    let data;
     if (body) {
-      body = JSON.stringify(body);
+      data = JSON.stringify(body);
     }
     return {
       method,
-      body,
+      body: data,
       cache,
       headers,
       mode,
