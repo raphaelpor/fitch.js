@@ -93,6 +93,8 @@ fitch.get(apiUrl, config)
 - Safari 6.1+
 - Internet Explorer 10+
 
+Note: This assumes that you’re using a transpiler like Babel.
+
 Note: modern browsers such as Chrome, Firefox, and Microsoft Edge contain native implementations of window.fetch, so the polyfill doesn't have any affect on those browsers. See more at [window.fetch polyfill](https://github.com/github/fetch).
 
 ## Contributig
