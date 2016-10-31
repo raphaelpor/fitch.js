@@ -1,7 +1,5 @@
-// Verify if is running in browser
-const nodeFetch = require('node-fetch');
-
-const f = typeof window === 'undefined' ? nodeFetch : fetch;
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 
 const config = require('./config');
 
@@ -28,7 +26,7 @@ module.exports = {
 
   request(method, url, req = {}) {
     const params = config.create(method, req);
-    const call = f(url, params);
+    const call = fetch(url, params);
     return req.raw ? call : call.then(this.check);
   },
 

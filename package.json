@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/raphaelpor/fitch#readme",
   "dependencies": {
-    "node-fetch": "^1.6.3"
+    "es6-promise": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
     "ava": "^0.16.0",

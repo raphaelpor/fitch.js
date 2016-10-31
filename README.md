@@ -86,6 +86,15 @@ fitch.get(apiUrl, config)
   .then(data => console.log(data))
 ```
 
+## Browser Support
+
+- Chrome
+- Firefox
+- Safari 6.1+
+- Internet Explorer 10+
+
+Note: modern browsers such as Chrome, Firefox, and Microsoft Edge contain native implementations of window.fetch, so the polyfill doesn't have any affect on those browsers. See more at [window.fetch polyfill](https://github.com/github/fetch).
+
 ## Contributig
 First yout need to fork this repository. Then:
 ```sh
