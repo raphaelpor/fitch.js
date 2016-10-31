@@ -89,6 +89,7 @@ const config = {
 fitch.get(apiUrl, config)
   .then(data => console.log(data))
 ```
+See more about fetch configuration at: [Fetch API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API).
 
 ## Browser Support
 
