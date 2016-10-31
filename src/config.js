@@ -2,15 +2,18 @@ module.exports = {
   create(
     method,
     {
-      body = '',
+      body,
       cache = 'default',
       headers = { 'Content-Type': 'application/json' },
       mode = 'cors',
     } = {}
   ) {
+    if (body) {
+      body = JSON.stringify(body);
+    }
     return {
       method,
-      body: JSON.stringify(body),
+      body,
       cache,
       headers,
       mode,

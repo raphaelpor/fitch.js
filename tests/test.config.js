@@ -16,7 +16,7 @@ test('method: create', t => {
 
   t.is(typeof create, 'function', 'is defined and is a function')
 
-  t.is(create().body, JSON.stringify(''), 'body = ""')
+  t.is(create().body, undefined, 'body = undefined')
   t.is(create('', conf).body, JSON.stringify(conf.body), 'body = "test"')
 
   t.is(create().cache, 'default', 'cache = "default"')
