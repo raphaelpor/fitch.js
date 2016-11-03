@@ -1,6 +1,6 @@
 {
   "name": "fitch",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Test using fetch API",
   "main": "src/index.js",
   "scripts": {
