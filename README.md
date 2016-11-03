@@ -47,7 +47,7 @@ fitch.get(apiUrl)
 ```js
 const req = {body: {name: 'Happy cat'}}
 
-fitch.get(apiUrl, req)
+fitch.post(apiUrl, req)
   .then(data => console.log(data))
 ```
 
@@ -55,7 +55,7 @@ fitch.get(apiUrl, req)
 ```js
 const req = {body: {name: 'Happy cat'}}
 
-fitch.get(apiUrl, req)
+fitch.put(apiUrl, req)
   .then(data => console.log(data))
 ```
 
@@ -63,13 +63,13 @@ fitch.get(apiUrl, req)
 ```js
 const req = {body: {name: 'Happy cat'}}
 
-fitch.get(apiUrl, req)
+fitch.patch(apiUrl, req)
   .then(data => console.log(data))
 ```
 
 ### delete
 ```js
-fitch.get(apiUrl)
+fitch.delete(apiUrl)
   .then(data => console.log(data))
 ```
 
