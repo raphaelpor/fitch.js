@@ -3,6 +3,7 @@
 A lightweight Promise based HTTP client, using Fetch API.
 
 [![Build Status](https://travis-ci.org/raphaelpor/fitch.js.svg?branch=master)](https://travis-ci.org/raphaelpor/fitch.js)
+[![license](https://img.shields.io/npm/l/fitch.svg)](https://github.com/raphaelpor/fitch.js/blob/master/LICENSE.md)
 
 ## Get started
 ### Install
@@ -12,7 +13,7 @@ npm i --save fitch
 
 ## Use
 
-** With ES2015 or TypeScript:**
+**With ES2015 or TypeScript:**
 
 ```js
 import fitch from 'fitch'

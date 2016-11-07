@@ -16,7 +16,7 @@
     "url": "git+https://github.com/raphaelpor/fitch.js.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/raphaelpor/fitch.js/issues"
   },
