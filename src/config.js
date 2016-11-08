@@ -1,31 +1,39 @@
 module.exports = {
-  create(method,
-    {
-      body,
-      cache = 'default',
-      credentials,
-      headers = { 'Content-Type': 'application/json' },
-      integrity,
-      mode = 'cors',
-      redirect,
-      referrer,
-      referrerPolicy,
-    } = {}) {
+  create(method, {
+    body,
+    cache = 'default',
+    credentials,
+    headers = { 'Content-Type': 'application/json' },
+    integrity,
+    mode = 'cors',
+    redirect,
+    referrer,
+    referrerPolicy,
+  } = {}) {
     let data;
+
     if (body) {
       data = JSON.stringify(body);
     }
-    return {
-      method,
+
+    const result = {
       body: data,
       cache,
       credentials,
       headers,
-      integrity,
       mode,
       redirect,
       referrer,
-      referrerPolicy,
     };
+
+    if (integrity) {
+      result.integrity = integrity;
+    }
+
+    if (referrerPolicy) {
+      result.referrerPolicy = referrerPolicy;
+    }
+
+    return result;
   },
 };
