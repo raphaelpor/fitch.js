@@ -2,8 +2,10 @@
 # Fitch.js
 A lightweight Promise based HTTP client, using Fetch API.
 
+[![npm version](https://badge.fury.io/js/fitch.svg)](https://badge.fury.io/js/fitch)
 [![Build Status](https://travis-ci.org/raphaelpor/fitch.js.svg?branch=master)](https://travis-ci.org/raphaelpor/fitch.js)
 [![license](https://img.shields.io/npm/l/fitch.svg)](https://github.com/raphaelpor/fitch.js/blob/master/LICENSE.md)
+
 
 * [Documentation](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
 * [License](https://github.com/raphaelpor/fitch.js/blob/master/LICENSE.md)
