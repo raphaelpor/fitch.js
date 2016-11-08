@@ -4,6 +4,7 @@ module.exports = {
     {
       body,
       cache = 'default',
+      credentials,
       headers = { 'Content-Type': 'application/json' },
       mode = 'cors',
       redirect,
@@ -17,6 +18,7 @@ module.exports = {
       method,
       body: data,
       cache,
+      credentials,
       headers,
       mode,
       redirect,

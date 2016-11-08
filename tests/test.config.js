@@ -9,6 +9,7 @@ test('method: create', t => {
   const conf = {
     body: { name: 'test' },
     cache: 'no-store',
+    credentials: 'omit',
     headers: { 'Content-Type': 'plain/text' },
     headersDefault: 'application/json',
     mode: 'no-cors',
@@ -31,4 +32,7 @@ test('method: create', t => {
 
   t.is(create().redirect, undefined, 'redirect = undefined')
   t.is(create('', conf).redirect, conf.redirect, 'redirect = "follow"')
+
+  t.is(create().credentials, undefined, 'credentials = undefined')
+  t.is(create('', conf).credentials, conf.credentials, 'credentials = "omit"')
 })

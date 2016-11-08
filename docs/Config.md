@@ -21,6 +21,10 @@ fitch.post(apiUrl, req)
 
 Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/cache).
 
+**credentials**
+
+Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
+
 **headers**
 
 Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/headers).
