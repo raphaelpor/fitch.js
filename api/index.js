@@ -49,7 +49,7 @@ server.route({
   method: 'DELETE',
   path: `${path}/{id}`,
   handler(request, reply) {
-    return reply();
+    return reply({response: 'ok'});
   },
 });
 
