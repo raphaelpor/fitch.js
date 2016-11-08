@@ -63,6 +63,12 @@ Customise your request with native Fetch options:
 
 **headers** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/headers).
 
+**integrity** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
+
 **mode** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode).
 
 **redirect** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
+
+**referrer** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
+
+**referrerPolicy** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).

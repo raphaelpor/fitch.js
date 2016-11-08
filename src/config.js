@@ -5,8 +5,11 @@ module.exports = {
       cache = 'default',
       credentials,
       headers = { 'Content-Type': 'application/json' },
+      integrity,
       mode = 'cors',
       redirect,
+      referrer,
+      referrerPolicy,
     } = {}) {
     let data;
     if (body) {
@@ -18,8 +21,11 @@ module.exports = {
       cache,
       credentials,
       headers,
+      integrity,
       mode,
       redirect,
+      referrer,
+      referrerPolicy,
     };
   },
 };

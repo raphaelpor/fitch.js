@@ -11,9 +11,12 @@ test('method: create', t => {
     cache: 'no-store',
     credentials: 'omit',
     headers: { 'Content-Type': 'plain/text' },
+    integrity: 'sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=',
     headersDefault: 'application/json',
     mode: 'no-cors',
     redirect: 'follow',
+    referrer: 'client',
+    referrerPolicy: 'origin',
   }
 
   t.is(typeof create, 'function', 'is defined and is a function')
@@ -35,4 +38,13 @@ test('method: create', t => {
 
   t.is(create().credentials, undefined, 'credentials = undefined')
   t.is(create('', conf).credentials, conf.credentials, 'credentials = "omit"')
+
+  t.is(create().integrity, undefined, 'integrity = undefined')
+  t.is(create('', conf).integrity, conf.integrity, 'integrity = "sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE="')
+
+  t.is(create().referrer, undefined, 'referrer = undefined')
+  t.is(create('', conf).referrer, conf.referrer, 'referrer = "client"')
+
+  t.is(create().referrerPolicy, undefined, 'referrerPolicy = undefined')
+  t.is(create('', conf).referrerPolicy, conf.referrerPolicy, 'referrerPolicy = "origin"')
 })
