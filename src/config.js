@@ -1,6 +1,5 @@
 module.exports = {
-  create(
-    method,
+  create(method,
     {
       body,
       cache = 'default',
@@ -8,8 +7,7 @@ module.exports = {
       headers = { 'Content-Type': 'application/json' },
       mode = 'cors',
       redirect,
-    } = {}
-  ) {
+    } = {}) {
     let data;
     if (body) {
       data = JSON.stringify(body);
