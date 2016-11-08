@@ -2,7 +2,7 @@
 
 Fitch.js allows you to use a custom configuration for your requests. You just need to pass a config object as second parameter of the Fitch.js methods.
 
-## Objects available
+## Options
 
 **body**
 
@@ -16,22 +16,6 @@ const req = { body: { name: 'Happy cat' } }
 fitch.post(apiUrl, req)
   .then(data => console.log(data))
 ```
-
-**cache**
-
-Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/cache).
-
-**credentials**
-
-Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
-
-**headers**
-
-Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/headers).
-
-**mode**
-
-Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode).
 
 **params**
 
@@ -69,6 +53,16 @@ fitch.get('image.jpg', { raw: true })
   .catch(fitch.error)
 ```
 
-**redirect**
+### Options from Fetch API
 
-Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
+Customise your request with native Fetch options:
+
+**cache** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/cache).
+
+**credentials** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
+
+**headers** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/headers).
+
+**mode** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode).
+
+**redirect** - [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
