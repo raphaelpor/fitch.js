@@ -83,11 +83,12 @@ const config = {
   cache = 'no-store',
   headers = { 'Content-Type': 'application/json' },
   mode = 'no-cors',
-  raw = true, // return the raw output of fetch()
   params: { // transform to '?test1=test-1&test2=test-2'
     test1: 'test-1',
     test2: 'test-2',
   },
+  raw = true, // return the raw output of fetch()
+  redirect: 'follow',
 }
 
 fitch.get(apiUrl, config)

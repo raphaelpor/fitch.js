@@ -6,6 +6,7 @@ module.exports = {
       cache = 'default',
       headers = { 'Content-Type': 'application/json' },
       mode = 'cors',
+      redirect,
     } = {}
   ) {
     let data;
@@ -18,6 +19,7 @@ module.exports = {
       cache,
       headers,
       mode,
+      redirect,
     };
   },
 };

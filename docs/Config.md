@@ -64,3 +64,7 @@ fitch.get('image.jpg', { raw: true })
   })
   .catch(fitch.error)
 ```
+
+**redirect**
+
+Same as in Fetch API. [See more at MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).

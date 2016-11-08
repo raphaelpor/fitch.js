@@ -12,6 +12,7 @@ test('method: create', t => {
     headers: { 'Content-Type': 'plain/text' },
     headersDefault: 'application/json',
     mode: 'no-cors',
+    redirect: 'follow',
   }
 
   t.is(typeof create, 'function', 'is defined and is a function')
@@ -27,4 +28,7 @@ test('method: create', t => {
 
   t.is(create().mode, 'cors', 'mode = "cors"')
   t.is(create('', conf).mode, conf.mode, 'mode = "no-cors"')
+
+  t.is(create().redirect, undefined, 'redirect = undefined')
+  t.is(create('', conf).redirect, conf.redirect, 'redirect = "follow"')
 })
