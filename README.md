@@ -7,10 +7,6 @@ A lightweight Promise based HTTP client, using Fetch API.
 [![Documentation Status](https://readthedocs.org/projects/fitchjs/badge/?version=latest)](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
 [![license](https://img.shields.io/npm/l/fitch.svg)](https://github.com/raphaelpor/fitch.js/blob/master/LICENSE.md)
 
-
-* [Documentation](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
-* [License](https://github.com/raphaelpor/fitch.js/blob/master/LICENSE.md)
-
 ## Get started
 ### Install
 ```sh
