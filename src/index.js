@@ -30,21 +30,25 @@ module.exports = {
     if (req.params) {
       paramsEncoded = params.transform(req.params);
     }
+
     const configObj = config.create(method, req);
     const call = fetch(url + paramsEncoded, configObj);
-    return req.raw ? call : call.then(this.check);
+
+    return req.raw ? call : call.then(resp => this.check(resp, req.dataType));
   },
 
-  check(resp) {
-    if (resp.ok) {
-      return resp.json();
+  check(resp, dataType) {
+    const typeList = ['arrayBuffer', 'blob', 'formData', 'json', 'text'];
+    const included = typeList.indexOf(dataType);
+
+    if (resp.ok && included !== -1) {
+      return resp[dataType]();
     }
+
     throw new Error(`${resp.status} - ${resp.statusText}.`);
   },
 
-  error(err) {
-    if (err) {
-      console.log('Error >', err);
-    }
+  error(err = '') {
+    console.log('Error >', err);
   },
 };
