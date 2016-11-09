@@ -37,7 +37,7 @@ module.exports = {
     return req.raw ? call : call.then(resp => this.check(resp, req.dataType));
   },
 
-  check(resp, dataType) {
+  check(resp, dataType = 'json') {
     const typeList = ['arrayBuffer', 'blob', 'formData', 'json', 'text'];
     const included = typeList.indexOf(dataType);
 
