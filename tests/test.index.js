@@ -46,14 +46,30 @@ test('method: check', t => {
   const resp = {
     ok: true,
     json() {
-      return true
+      return 'json'
+    },
+    blob() {
+      return 'blob'
+    },
+    formData() {
+      return 'formData'
+    },
+    text() {
+      return 'text'
+    },
+    arrayBuffer() {
+      return 'arrayBuffer'
     },
     status: '404',
     statusText: 'Not found.',
   }
 
   t.is(typeof fitch.check, 'function', 'is defined and is a function')
-  t.is(fitch.check(resp), true, 'validade the response and return "true"')
+  t.is(fitch.check(resp), 'json', 'validade the response and return "json"')
+  t.is(fitch.check(resp, 'blob'), 'blob', 'validade the response and return "blob"')
+  t.is(fitch.check(resp, 'formData'), 'formData', 'validade the response and return "formData"')
+  t.is(fitch.check(resp, 'text'), 'text', 'validade the response and return "text"')
+  t.is(fitch.check(resp, 'arrayBuffer'), 'arrayBuffer', 'validade the response and return "arrayBuffer"')
 })
 
 test('method: error', t => {
