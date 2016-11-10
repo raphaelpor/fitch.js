@@ -4,7 +4,7 @@ Fitch.js allows you to use a custom configuration for your requests. You just ne
 
 ## Options
 
-**body**
+### **body** *(object)*
 
 Receives a json object, that is transformed to string by Fitch.js, before send the request.
 
@@ -17,7 +17,32 @@ fitch.post(apiUrl, req)
   .then(data => console.log(data))
 ```
 
-**params**
+### **dataType** *(string)*
+
+Returns a parsed data of the type you need.
+
+Valid options are: `arrayBuffer`, `blob`, `formData`, `json` and `text`.
+
+*Default:* `json`.
+
+See more at [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Body).
+
+```js
+// Image file
+const config = { dataType: 'blob' }
+
+fitch.get('image.jpg', config)
+  .then((imageBlob) => {
+    const objectURL = URL.createObjectURL(imageBlob)
+    myImage.src = objectURL
+  })
+
+// Default: json.
+fitch.get('file.json')
+  .then(data => console.log(data))
+```
+
+### **params** *(object)*
 
 You don't need to pass your URL parameters as string. Fitch.js allows you to pass the parameters inside a object:
 
@@ -33,7 +58,7 @@ fitch.get(apiUrl, config)
   .then(data => console.log(data))
 ```
 
-**raw**
+### **raw** *(boolean)*
 
 Returns the raw output of Fetch API, so you can work with headers and custom requests like files.
 
@@ -46,8 +71,8 @@ fitch.get('image.jpg', { raw: true })
       console.log('Network response was not ok.');
     }
   })
-  .then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob)
+  .then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob)
     myImage.src = objectURL
   })
   .catch(fitch.error)
