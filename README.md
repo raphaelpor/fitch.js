@@ -77,9 +77,9 @@ fitch.patch(apiUrl, req)
   .then(data => console.log(data))
 ```
 
-### delete
+### del
 ```js
-fitch.delete(apiUrl)
+fitch.del(apiUrl)
   .then(data => console.log(data))
 ```
 

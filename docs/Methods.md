@@ -36,10 +36,10 @@ fitch.patch(apiUrl, req)
   .then(data => console.log(data))
 ```
 
-**delete(url, config)**
+**del(url, config)**
 
 ```js
-fitch.delete(apiUrl)
+fitch.del(apiUrl)
   .then(data => console.log(data))
 ```
 

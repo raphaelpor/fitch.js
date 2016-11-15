@@ -48,6 +48,6 @@ fitch.patch(`${baseUrl}/2`, reqUpdate).then(resp =>
 ).catch(fitch.error);
 
 // DELETE
-fitch.delete(`${baseUrl}/2`).then(resp =>
+fitch.del(`${baseUrl}/2`).then(resp =>
   console.log('DELETE\t>>>', resp)
 ).catch(fitch.error);
