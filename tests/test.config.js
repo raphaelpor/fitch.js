@@ -1,13 +1,7 @@
 import test from 'ava'
-import config from '../src/config'
+import createConfig from '../src/config'
 
-const create = config.create
-
-test('module: config', t =>
-  t.is(typeof config, 'object', 'is defined and is a object')
-)
-
-test('method: create', t => {
+test('method: createConfig', t => {
   const conf = {
     body: { name: 'test' },
     cache: 'no-store',
@@ -21,32 +15,32 @@ test('method: create', t => {
     referrerPolicy: 'origin',
   }
 
-  t.is(typeof create, 'function', 'is defined and is a function')
+  t.is(typeof createConfig, 'function', 'is defined and is a function')
 
-  t.is(create().body, undefined, 'body = undefined')
-  t.is(create('', conf).body, JSON.stringify(conf.body), 'body = "test"')
+  t.is(createConfig().body, undefined, 'body = undefined')
+  t.is(createConfig('', conf).body, JSON.stringify(conf.body), 'body = "test"')
 
-  t.is(create().cache, 'default', 'cache = "default"')
-  t.is(create('', conf).cache, conf.cache, 'cache = "no-store"')
+  t.is(createConfig().cache, 'default', 'cache = "default"')
+  t.is(createConfig('', conf).cache, conf.cache, 'cache = "no-store"')
 
-  t.is(create().headers['Content-Type'], conf.headersDefault, 'headers = "application/json"')
-  t.is(create('', conf).headers, conf.headers, 'headers = "no-cors"')
+  t.is(createConfig().headers['Content-Type'], conf.headersDefault, 'headers = "application/json"')
+  t.is(createConfig('', conf).headers, conf.headers, 'headers = "no-cors"')
 
-  t.is(create().mode, 'cors', 'mode = "cors"')
-  t.is(create('', conf).mode, conf.mode, 'mode = "no-cors"')
+  t.is(createConfig().mode, 'cors', 'mode = "cors"')
+  t.is(createConfig('', conf).mode, conf.mode, 'mode = "no-cors"')
 
-  t.is(create().redirect, undefined, 'redirect = undefined')
-  t.is(create('', conf).redirect, conf.redirect, 'redirect = "follow"')
+  t.is(createConfig().redirect, undefined, 'redirect = undefined')
+  t.is(createConfig('', conf).redirect, conf.redirect, 'redirect = "follow"')
 
-  t.is(create().credentials, undefined, 'credentials = undefined')
-  t.is(create('', conf).credentials, conf.credentials, 'credentials = "omit"')
+  t.is(createConfig().credentials, undefined, 'credentials = undefined')
+  t.is(createConfig('', conf).credentials, conf.credentials, 'credentials = "omit"')
 
-  t.is(create().integrity, undefined, 'integrity = undefined')
-  t.is(create('', conf).integrity, conf.integrity, 'integrity = "sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE="')
+  t.is(createConfig().integrity, undefined, 'integrity = undefined')
+  t.is(createConfig('', conf).integrity, conf.integrity, 'integrity = "sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE="')
 
-  t.is(create().referrer, undefined, 'referrer = undefined')
-  t.is(create('', conf).referrer, conf.referrer, 'referrer = "client"')
+  t.is(createConfig().referrer, undefined, 'referrer = undefined')
+  t.is(createConfig('', conf).referrer, conf.referrer, 'referrer = "client"')
 
-  t.is(create().referrerPolicy, undefined, 'referrerPolicy = undefined')
-  t.is(create('', conf).referrerPolicy, conf.referrerPolicy, 'referrerPolicy = "origin"')
+  t.is(createConfig().referrerPolicy, undefined, 'referrerPolicy = undefined')
+  t.is(createConfig('', conf).referrerPolicy, conf.referrerPolicy, 'referrerPolicy = "origin"')
 })

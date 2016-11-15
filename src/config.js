@@ -1,5 +1,4 @@
-export default {
-  create(method, {
+export default function createConfig(method, {
     body,
     cache = 'default',
     credentials,
@@ -10,30 +9,30 @@ export default {
     referrer,
     referrerPolicy,
   } = {}) {
-    let data;
+  let data;
 
-    if (body) {
-      data = JSON.stringify(body);
-    }
+  if (body) {
+    data = JSON.stringify(body);
+  }
 
-    const result = {
-      body: data,
-      cache,
-      credentials,
-      headers,
-      mode,
-      redirect,
-      referrer,
-    };
+  const result = {
+    body: data,
+    cache,
+    credentials,
+    headers,
+    method,
+    mode,
+    redirect,
+    referrer,
+  };
 
-    if (integrity) {
-      result.integrity = integrity;
-    }
+  if (integrity) {
+    result.integrity = integrity;
+  }
 
-    if (referrerPolicy) {
-      result.referrerPolicy = referrerPolicy;
-    }
+  if (referrerPolicy) {
+    result.referrerPolicy = referrerPolicy;
+  }
 
-    return result;
-  },
-};
+  return result;
+}
