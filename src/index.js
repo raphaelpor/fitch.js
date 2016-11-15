@@ -26,6 +26,17 @@ function error(err = '') {
   console.log('Error >', err);
 }
 
+const fitch = {
+  del,
+  error,
+  get,
+  patch,
+  post,
+  put,
+};
+
+export default fitch;
+
 export {
   del,
   error,
