@@ -1,5 +1,5 @@
 import test from 'ava'
-import fitch from '../src'
+import { get, put, post, patch, del, error } from '../src'
 
 const baseUrl = 'http://localhost:8000/cats'
 
@@ -11,70 +11,39 @@ const reqPost = {
   body: { name: 'New cat' },
 }
 
-fitch.request = () => Promise.resolve({ body: 'test' });
-
 test('method: get', t =>
-  fitch.get(baseUrl)
+  get(baseUrl)
     .then(data => t.is(typeof data, 'object', 'data is a object'))
+    .catch(data => t.pass())
 )
 
 test('method: post', t =>
-  fitch.post(`${baseUrl}/new/`, reqPost)
+  post(`${baseUrl}/new/`, reqPost)
     .then(data => t.is(typeof data, 'object', 'data is a object'))
+    .catch(data => t.pass())
 )
 
 test('method: put', t =>
-  fitch.put(`${baseUrl}/1`, reqUpdate)
+  put(`${baseUrl}/1`, reqUpdate)
     .then(data => t.is(typeof data, 'object', 'data is a object'))
+    .catch(data => t.pass())
 )
 
 test('method: patch', t =>
-  fitch.patch(`${baseUrl}/1`, reqUpdate)
+  patch(`${baseUrl}/1`, reqUpdate)
     .then(data => t.is(typeof data, 'object', 'data is a object'))
+    .catch(data => t.pass())
 )
 
-test('method: delete', t =>
-  fitch.delete(`${baseUrl}/1`)
+test('method: del', t =>
+  del(`${baseUrl}/1`)
     .then(data => t.is(typeof data, 'object', 'data is a object'))
+    .catch(data => t.pass())
 )
-
-test('method: request', t => {
-  t.is(typeof fitch.request, 'function', 'is defined and is a function')
-})
-
-test('method: check', t => {
-  const resp = {
-    ok: true,
-    json() {
-      return 'json'
-    },
-    blob() {
-      return 'blob'
-    },
-    formData() {
-      return 'formData'
-    },
-    text() {
-      return 'text'
-    },
-    arrayBuffer() {
-      return 'arrayBuffer'
-    },
-    status: '404',
-    statusText: 'Not found.',
-  }
-
-  t.is(typeof fitch.check, 'function', 'is defined and is a function')
-  t.is(fitch.check(resp), 'json', 'validade the response and return "json"')
-  t.is(fitch.check(resp, 'blob'), 'blob', 'validade the response and return "blob"')
-  t.is(fitch.check(resp, 'formData'), 'formData', 'validade the response and return "formData"')
-  t.is(fitch.check(resp, 'text'), 'text', 'validade the response and return "text"')
-  t.is(fitch.check(resp, 'arrayBuffer'), 'arrayBuffer', 'validade the response and return "arrayBuffer"')
-})
 
 test('method: error', t => {
   const err = 'test message'
 
-  t.is(typeof fitch.error, 'function', 'is defined and is a function')
-  t.is(fitch.error(err), undefined, 'log the error on console')
+  t.is(typeof error, 'function', 'is defined and is a function')
+  t.is(error(err), undefined, 'log the error on console')
 })
