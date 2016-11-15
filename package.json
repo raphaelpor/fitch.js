@@ -1,6 +1,6 @@
 {
   "name": "fitch",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "A lightweight Promise based HTTP client, using Fetch API.",
   "keywords": [
     "fetch",
