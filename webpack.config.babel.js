@@ -7,7 +7,7 @@ export default {
   output: {
     path: join(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: '_',
+    library: 'fitch',
   },
   devtool: 'source-map',
   module: {
