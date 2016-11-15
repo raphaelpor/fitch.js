@@ -1,3 +1,4 @@
-tests/*
-api/*
-examples/*
+tests
+api
+examples
+dist
