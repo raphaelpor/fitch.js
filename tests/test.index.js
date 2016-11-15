@@ -1,5 +1,5 @@
 import test from 'ava'
-import { get, put, post, patch, del } from '../src'
+import { get, put, post, patch, del, error } from '../src'
 
 const baseUrl = 'http://localhost:8000/cats'
 
@@ -40,3 +40,10 @@ test('method: del', t =>
     .then(data => t.is(typeof data, 'object', 'data is a object'))
     .catch(data => t.pass())
 )
+
+test('method: error', t => {
+  const err = 'test message'
+
+  t.is(typeof error, 'function', 'is defined and is a function')
+  t.is(error(err), undefined, 'log the error on console')
+})
