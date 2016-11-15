@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   transform(source) {
     const list = [];
 

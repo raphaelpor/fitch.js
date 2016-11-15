@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   create(method, {
     body,
     cache = 'default',

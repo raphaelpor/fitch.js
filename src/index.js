@@ -1,10 +1,9 @@
-require('es6-promise').polyfill();
-require('fetch-everywhere');
+import 'fetch-everywhere';
 
-const config = require('./config');
-const params = require('./params');
+import config from './config';
+import params from './params';
 
-module.exports = {
+export default {
   get(url, req) {
     return this.request('GET', url, req);
   },
