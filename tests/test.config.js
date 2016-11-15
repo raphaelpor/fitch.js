@@ -1,5 +1,7 @@
 import test from 'ava'
-import config, { create } from '../src/config'
+import config from '../src/config'
+
+const create = config.create
 
 test('module: config', t =>
   t.is(typeof config, 'object', 'is defined and is a object')
