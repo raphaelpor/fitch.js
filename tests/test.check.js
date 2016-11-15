@@ -1,5 +1,5 @@
 import test from 'ava'
-import check from '../src/check'
+import check from '../src/utils/check'
 
 test('method: check', t => {
   const resp = {

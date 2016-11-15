@@ -1,6 +1,6 @@
 import 'fetch-everywhere';
 
-import request from './request';
+import request from './utils/request';
 
 function get(url, req) {
   return request('GET', url, req);

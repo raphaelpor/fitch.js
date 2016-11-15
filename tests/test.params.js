@@ -1,5 +1,5 @@
 import test from 'ava'
-import transformParams from '../src/params'
+import transformParams from '../src/utils/params'
 
 test('method: transform', t => {
   const obj = {

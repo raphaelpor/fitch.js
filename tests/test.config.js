@@ -1,5 +1,5 @@
 import test from 'ava'
-import createConfig from '../src/config'
+import createConfig from '../src/utils/config'
 
 test('method: createConfig', t => {
   const conf = {
