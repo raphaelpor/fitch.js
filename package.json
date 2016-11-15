@@ -58,5 +58,11 @@
       "es2015",
       "stage-2"
     ]
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
