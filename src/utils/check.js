@@ -1,5 +1,3 @@
-import 'fetch-everywhere';
-
 function check(resp, dataType = 'json') {
   const typeList = ['arrayBuffer', 'blob', 'formData', 'json', 'text'];
   const included = typeList.indexOf(dataType);

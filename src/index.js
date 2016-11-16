@@ -1,5 +1,3 @@
-import 'fetch-everywhere';
-
 import request from './utils/request';
 
 function get(url, req) {
