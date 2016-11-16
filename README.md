@@ -11,6 +11,14 @@ A lightweight Promise based HTTP client, using Fetch API.
 [![bitHound Dependencies](https://www.bithound.io/github/raphaelpor/fitch.js/badges/dependencies.svg)](https://www.bithound.io/github/raphaelpor/fitch.js/master/dependencies/npm)
 [![bitHound Code](https://www.bithound.io/github/raphaelpor/fitch.js/badges/code.svg)](https://www.bithound.io/github/raphaelpor/fitch.js)
 
+## Features
+
+- Uses [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- Works on both old and new browsers and on Node.js
+- Supports the [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) API
+- Transform request and response data
+- Automatic transforms for JSON data
+
 ## Get started
 
 [Read the full Documentation](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
