@@ -8,5 +8,8 @@
   ],
   "test": [
     "tests/**"
-  ]
+  ],
+  "critics": {
+    "lint": {"engine": "eslint"}
+  }
 }
