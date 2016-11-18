@@ -45,7 +45,7 @@ const fitch = require('fitch')
 **UMD:**
 
 ```html
-<script src="node_modules/fitch/dist/index.umd.min.js"></script>
+<script src="https://unpkg.com/fitch/dist/index.umd.min.js"></script>
 ```
 
 ### Make your first request:

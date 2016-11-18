@@ -24,4 +24,10 @@ fitch.get(apiUrl)
   .then(data => console.log(data))
 ```
 
+Also, you can use cdn:
+
+```html
+<script src="https://unpkg.com/fitch/dist/index.umd.min.js"></script>
+```
+
 Next: [Learn about the methods available](https://github.com/raphaelpor/fitch.js/blob/master/docs/Methods.md).
