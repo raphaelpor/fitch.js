@@ -30,4 +30,4 @@ Also, you can use cdn:
 <script src="https://unpkg.com/fitch/dist/index.umd.min.js"></script>
 ```
 
-Next: [Learn about the methods available](https://github.com/raphaelpor/fitch.js/blob/master/docs/Methods.md).
+**Next: [Learn about the methods available](https://github.com/raphaelpor/fitch.js/blob/master/docs/Methods.md).**

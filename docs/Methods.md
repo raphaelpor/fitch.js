@@ -52,4 +52,4 @@ fitch.get(apiUrl)
   .catch(fitch.error) // log the error message on the console
 ```
 
-**Note:** Fitch.js allows you to use a custom configuration for your requests. [You can learn about it here](https://github.com/raphaelpor/fitch.js/blob/master/docs/Config.md).
+**Next: [Learn about custom configuration](https://github.com/raphaelpor/fitch.js/blob/master/docs/Config.md).**
