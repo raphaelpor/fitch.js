@@ -24,7 +24,12 @@ function error(err = '') {
   console.log('Error >', err);
 }
 
+function all(promises) {
+  return Promise.all(promises);
+}
+
 const fitch = {
+  all,
   del,
   error,
   get,
@@ -36,6 +41,7 @@ const fitch = {
 export default fitch;
 
 export {
+  all,
   del,
   error,
   get,
