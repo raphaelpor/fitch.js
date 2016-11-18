@@ -3,8 +3,11 @@
   "version": "0.8.1",
   "description": "A lightweight Promise based HTTP client, using Fetch API.",
   "keywords": [
+    "fitch",
     "fetch",
-    "fitch"
+    "http",
+    "request",
+    "promise"
   ],
   "license": "MIT",
   "repository": {
