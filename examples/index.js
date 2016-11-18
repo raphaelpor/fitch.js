@@ -1,4 +1,4 @@
-const fitch = require('../src');
+const fitch = require('../dist');
 
 const baseUrl = 'http://localhost:8000/cats';
 

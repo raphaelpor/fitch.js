@@ -51,7 +51,7 @@
     "examples": "node ./examples/index.js",
     "prebuild": "npm run check && npm run clean",
     "lint": "eslint src",
-    "start": "node ./api/index.js",
+    "start": "node ./examples/api/index.js",
     "test": "ava ./tests/*",
     "watch:test": "npm test -- -w"
   },
