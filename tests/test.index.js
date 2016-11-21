@@ -1,5 +1,5 @@
 import test from 'ava'
-import { get, put, post, patch, del, error } from '../src'
+import { get, put, post, patch, del, all, error } from '../src'
 
 const baseUrl = 'http://localhost:8000/cats'
 
@@ -40,6 +40,19 @@ test('method: del', t =>
     .then(data => t.is(typeof data, 'object', 'data is a object'))
     .catch(data => t.pass())
 )
+
+test('method: all', t => {
+  const prom1 = Promise.resolve('ok-1')
+  const prom2 = Promise.resolve('ok-2')
+
+  t.is(typeof all, 'function', 'all is a function')
+
+  return all([ prom1, prom2 ])
+    .then(([ result1, result2 ]) => {
+      t.is(result1, 'ok-1', 'result1 is ok-1')
+      t.is(result2, 'ok-2', 'result2 is ok-2')
+    })
+})
 
 test('method: error', t => {
   const err = 'test message'
