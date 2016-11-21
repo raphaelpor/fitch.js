@@ -43,6 +43,25 @@ fitch.del(apiUrl)
   .then(data => console.log(data))
 ```
 
+## Concurrency
+
+**all(iterable)**
+
+`all()` is a helper function for dealing with concurrent requests.
+
+```js
+const reqDogs = fitch.get('/dogs')
+const reqCats = fitch.get('/cats')
+
+function doSomething([ responseDogs, responseCats ]) {
+  console.log('Dogs\t>>>', responseDogs)
+  console.log('Cats\t>>>', responseCats)
+}
+
+fitch.all([ reqDogs, reqCats ])
+  .then(doSomething)
+```
+
 ## Handling errors
 If Fetch throws an error, we can handle this using `catch()`:
 
