@@ -110,6 +110,25 @@ fitch.get(apiUrl, config)
 ```
 See more about fetch configuration at: [Fetch API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API).
 
+## Concurrency
+
+### all
+
+Helper function for dealing with concurrent requests.
+
+```js
+const reqDogs = fitch.get('/dogs')
+const reqCats = fitch.get('/cats')
+
+function doSomething([ responseDogs, responseCats ]) {
+  console.log('Dogs\t>>>', responseDogs)
+  console.log('Cats\t>>>', responseCats)
+}
+
+fitch.all([ reqDogs, reqCats ])
+  .then(doSomething)
+```
+
 ## Browser Support
 
 | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/edge.png" alt="IE / Edge" width="32px" height="32px" />](http://godban.github.io/browsers-support-badges/) | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/firefox.png" alt="Firefox" width="32px" height="32px" />](http://godban.github.io/browsers-support-badges/)| [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/chrome.png" alt="Chrome" width="32px" height="32px" />](http://godban.github.io/browsers-support-badges/) | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/safari.png" alt="Safari" width="32px" height="32px" />](http://godban.github.io/browsers-support-badges/) |
