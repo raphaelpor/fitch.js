@@ -17,6 +17,13 @@ const reqPost = {
   body: { name: 'New cat' },
 };
 
+// all
+fitch.all([fitch.get(baseUrl), fitch.get(baseUrl, { raw: true })])
+  .then(([x, y]) => {
+    console.log('x\t>>>', x);
+    console.log('y\t>>>', y);
+  });
+
 // GET
 fitch.get(baseUrl).then(resp =>
   console.log('GET\t>>>', resp)
