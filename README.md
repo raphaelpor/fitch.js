@@ -1,4 +1,5 @@
-![Fitch.js](https://github.com/raphaelpor/fitch.js/raw/master/assets/fitch-mini.png)
+![Fitch.js](https://github.com/raphaelpor/fitch.js/raw/master/assets/fitch-mini.jpg)
+
 # Fitch.js
 A lightweight Promise based HTTP client, using Fetch API.
 
@@ -147,3 +148,6 @@ npm run examples # run examples
 ```
 Note: Your code must be tested and pass in linter check.
 You can verify your code with ESLint, using `npm run lint`.
+
+## Logo
+Copyright © [Bárbara Schoen](https://www.linkedin.com/in/b%C3%A1rbara-schoen-692269b6)
