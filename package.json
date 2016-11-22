@@ -55,12 +55,6 @@
     "test": "ava ./tests/*",
     "watch:test": "npm test -- -w"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-2"
-    ]
-  },
   "ava": {
     "require": [
       "babel-register"
