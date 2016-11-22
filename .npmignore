@@ -3,3 +3,9 @@ tests
 assets
 docs
 src
+.bithoundrc
+.eslintignore
+.eslintrc
+.travis.yml
+webpack.config.babel.js
+.babelrc
