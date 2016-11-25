@@ -1,5 +1,7 @@
 # Get started
 
+Translations: [Português](https://github.com/raphaelpor/fitch.js/blob/master/docs/pt-br/Intro.md).
+
 Fitch.js is a lightweight client HTTP that uses Fetch API and runs on Node.js and old browsers (with a polyfill).
 
 ## Install
