@@ -139,6 +139,9 @@ fitch.all([ reqDogs, reqCats ])
 Note: modern browsers such as Chrome, Firefox, and Microsoft Edge contain native implementations of window.fetch, so the polyfill doesn't have any affect on those browsers. See more at [window.fetch polyfill](https://github.com/github/fetch).
 
 ## Contributig
+
+Read the [Code of conduct](https://github.com/raphaelpor/fitch.js/blob/master/code_of_conduct.md).
+
 First yout need to fork this repository. Then:
 ```sh
 npm i # install local dependencies
