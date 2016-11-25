@@ -60,7 +60,7 @@ fitch.get(apiUrl, config)
 
 ### **raw** *(boolean)*
 
-Returns the raw output of Fetch API, so you can work with headers and custom requests like files.
+Returns the raw output of Fetch API, so you can work with headers.
 
 ```js
 fitch.get('image.jpg', { raw: true })
