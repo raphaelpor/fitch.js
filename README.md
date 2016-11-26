@@ -52,14 +52,23 @@ const fitch = require('fitch')
 ### Make your first request:
 ```js
 fitch.get(apiUrl)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
+
+/* Response:
+{
+  data: { foo: 'bar' },
+  status: 200,
+  statusText: 'Ok',
+  headers: { Content-Type: application/json },
+}
+*/
 ```
 
 ## Methods available:
 ### get
 ```js
 fitch.get(apiUrl)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ### post
@@ -67,7 +76,7 @@ fitch.get(apiUrl)
 const req = {body: {name: 'Happy cat'}}
 
 fitch.post(apiUrl, req)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ### put
@@ -75,7 +84,7 @@ fitch.post(apiUrl, req)
 const req = {body: {name: 'Happy cat'}}
 
 fitch.put(apiUrl, req)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ### patch
@@ -83,13 +92,13 @@ fitch.put(apiUrl, req)
 const req = {body: {name: 'Happy cat'}}
 
 fitch.patch(apiUrl, req)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ### del
 ```js
 fitch.del(apiUrl)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ## Use with custom configuration
@@ -107,7 +116,7 @@ const config = {
 }
 
 fitch.get(apiUrl, config)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 See more about fetch configuration at: [Fetch API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API).
 

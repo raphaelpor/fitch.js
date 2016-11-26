@@ -14,7 +14,7 @@ Recebe um objeto json, que é transformado para string antes fazer a chamada.
 const req = { body: { name: 'Happy cat' } }
 
 fitch.post(apiUrl, req)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ### **dataType** *(string)*
@@ -32,14 +32,14 @@ Veja mais em [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Body).
 const config = { dataType: 'blob' }
 
 fitch.get('image.jpg', config)
-  .then((imageBlob) => {
-    const objectURL = URL.createObjectURL(imageBlob)
+  .then((response) => {
+    const objectURL = URL.createObjectURL(response.data)
     myImage.src = objectURL
   })
 
 // Exemplo padrão (json).
 fitch.get('file.json')
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ### **params** *(objeto)*
@@ -55,7 +55,7 @@ const config = {
 }
 
 fitch.get(apiUrl, config)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ### **raw** *(boolean)*
