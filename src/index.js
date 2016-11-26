@@ -27,7 +27,6 @@ function all(promises) {
 const fitch = {
   all,
   del,
-  error,
   get,
   patch,
   post,
@@ -39,7 +38,6 @@ export default fitch;
 export {
   all,
   del,
-  error,
   get,
   patch,
   post,
