@@ -47,15 +47,21 @@
     "build:umd.min": "webpack --output-filename index.umd.min.js -p --colors",
     "check": "npm run lint && npm run test",
     "clean": "rimraf dist coverage",
-    "coverage": "nyc ava ./tests/*",
+    "coverage": "nyc report npm test",
     "examples": "node ./examples/index.js",
     "prebuild": "npm run check && npm run clean",
     "lint": "eslint src",
     "start": "node ./examples/api/index.js",
-    "test": "ava ./tests/*",
+    "test": "ava",
     "watch:test": "npm test -- -w"
   },
   "ava": {
+    "files": [
+      "tests/*.js"
+    ],
+    "source": [
+      "src/**/*.js"
+    ],
     "require": [
       "babel-register"
     ],
