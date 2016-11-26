@@ -17,6 +17,10 @@ const reqPost = {
   body: { name: 'New cat' },
 };
 
+function logError(err) {
+  console.log(err);
+}
+
 // all
 fitch.all([fitch.get(baseUrl), fitch.get(baseUrl, { raw: true })])
   .then(([x, y]) => {
@@ -27,34 +31,34 @@ fitch.all([fitch.get(baseUrl), fitch.get(baseUrl, { raw: true })])
 // GET
 fitch.get(baseUrl).then(resp =>
   console.log('GET\t>>>', resp)
-).catch(fitch.error);
+).catch(logError);
 
 // GET with params
 fitch.get(baseUrl, reqGet).then(resp =>
   console.log('GET\t>>>', resp)
-).catch(fitch.error);
+).catch(logError);
 
 // GET raw output
 fitch.get(baseUrl, { raw: true }).then(resp =>
   console.log('GET\t>>>', resp)
-).catch(fitch.error);
+).catch(logError);
 
 // POST
 fitch.post(`${baseUrl}/new/`, reqPost).then(resp =>
   console.log('POST\t>>>', resp)
-).catch(fitch.error);
+).catch(logError);
 
 // PUT
 fitch.put(`${baseUrl}/1`, reqUpdate).then(resp =>
   console.log('PUT\t>>>', resp)
-).catch(fitch.error);
+).catch(logError);
 
 // PATCH
 fitch.patch(`${baseUrl}/2`, reqUpdate).then(resp =>
   console.log('PATCH\t>>>', resp)
-).catch(fitch.error);
+).catch(logError);
 
 // DELETE
 fitch.del(`${baseUrl}/2`).then(resp =>
   console.log('DELETE\t>>>', resp)
-).catch(fitch.error);
+).catch(logError);
