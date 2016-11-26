@@ -53,10 +53,3 @@ test('method: all', t => {
       t.is(result2, 'ok-2', 'result2 is ok-2')
     })
 })
-
-test('method: error', t => {
-  const err = 'test message'
-
-  t.is(typeof error, 'function', 'is defined and is a function')
-  t.is(error(err), undefined, 'log the error on console')
-})
