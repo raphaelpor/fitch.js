@@ -30,12 +30,12 @@ fitch.all([fitch.get(baseUrl), fitch.get(baseUrl, { raw: true })])
 
 // GET
 fitch.get(baseUrl).then(resp =>
-  console.log('GET\t>>>', resp)
+  console.log('GET\t>>>', resp.data)
 ).catch(logError);
 
 // GET with params
 fitch.get(baseUrl, reqGet).then(resp =>
-  console.log('GET\t>>>', resp)
+  console.log('GET\t>>>', resp.data)
 ).catch(logError);
 
 // GET raw output
@@ -45,20 +45,20 @@ fitch.get(baseUrl, { raw: true }).then(resp =>
 
 // POST
 fitch.post(`${baseUrl}/new/`, reqPost).then(resp =>
-  console.log('POST\t>>>', resp)
+  console.log('POST\t>>>', resp.data)
 ).catch(logError);
 
 // PUT
 fitch.put(`${baseUrl}/1`, reqUpdate).then(resp =>
-  console.log('PUT\t>>>', resp)
+  console.log('PUT\t>>>', resp.data)
 ).catch(logError);
 
 // PATCH
 fitch.patch(`${baseUrl}/2`, reqUpdate).then(resp =>
-  console.log('PATCH\t>>>', resp)
+  console.log('PATCH\t>>>', resp.data)
 ).catch(logError);
 
 // DELETE
 fitch.del(`${baseUrl}/2`).then(resp =>
-  console.log('DELETE\t>>>', resp)
+  console.log('DELETE\t>>>', resp.data)
 ).catch(logError);
