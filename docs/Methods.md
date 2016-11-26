@@ -68,7 +68,7 @@ If Fetch throws an error, we can handle this using `catch()`:
 ```js
 fitch.get(apiUrl)
   .then(data => console.log(data))
-  .catch(fitch.error) // log the error message on the console
+  .catch(err => console.error(err))
 ```
 
 **Next: [Learn about custom configuration](https://github.com/raphaelpor/fitch.js/blob/master/docs/Config.md).**

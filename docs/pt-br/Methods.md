@@ -62,4 +62,14 @@ fitch.all([ reqDogs, reqCats ])
   .then(doSomething)
 ```
 
+
+## Manipulando erros
+Se houver um erro na chamada do Fetch, você pode pegá-lo usando `catch()`:
+
+```js
+fitch.get(apiUrl)
+  .then(data => console.log(data))
+  .catch(err => console.error(err))
+```
+
 **Next: [Veja como personalizar seus requests](https://github.com/raphaelpor/fitch.js/blob/master/docs/pt-br/Config.md).**

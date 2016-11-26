@@ -20,10 +20,6 @@ function del(url, req) {
   return request('DELETE', url, req);
 }
 
-function error(err = '') {
-  console.log('Error >', err);
-}
-
 function all(promises) {
   return Promise.all(promises);
 }
