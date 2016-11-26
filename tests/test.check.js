@@ -40,3 +40,11 @@ test('method: check', t => {
     t.is(typeof response.headers, 'object', 'return the headers object')
   })
 })
+
+test('method: check', t => {
+    const error = t.throws(() => {
+        check(resp, 'invalidData')
+    }, Error);
+
+    t.is(error.message, 'Invalid data type')
+});
