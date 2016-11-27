@@ -1,6 +1,8 @@
 ![Fitch.js](https://github.com/raphaelpor/fitch.js/raw/master/assets/fitch-mini.jpg)
 
 # Fitch.js
+
+[![Join the chat at https://gitter.im/fitch-js/Lobby](https://badges.gitter.im/fitch-js/Lobby.svg)](https://gitter.im/fitch-js/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A lightweight Promise based HTTP client, using Fetch API.
 
 [![npm version](https://badge.fury.io/js/fitch.svg)](https://www.npmjs.com/package/fitch)
