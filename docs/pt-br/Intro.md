@@ -21,7 +21,16 @@ import fitch from 'fitch'
 const apiUrl = 'https://localhost:8080/'
 
 fitch.get(apiUrl)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
+
+  /* Resposta:
+  {
+    data: { foo: 'bar' },
+    status: 200,
+    statusText: 'Ok',
+    headers: { Content-Type: application/json },
+  }
+  */
 ```
 
 Também é possível usar o CDN:

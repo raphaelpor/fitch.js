@@ -1,32 +1,50 @@
 import test from 'ava'
 import check from '../src/utils/check'
 
-test('method: check', t => {
-  const resp = {
-    ok: true,
-    json() {
-      return 'json'
-    },
-    blob() {
-      return 'blob'
-    },
-    formData() {
-      return 'formData'
-    },
-    text() {
-      return 'text'
-    },
-    arrayBuffer() {
-      return 'arrayBuffer'
-    },
-    status: '404',
-    statusText: 'Not found.',
-  }
+const resp = {
+  ok: true,
+  data: { foo: 'bar' },
+  status: 200,
+  statusText: 'Ok',
+  headers: { foo: 'bar' },
+  json() {
+    return Promise.resolve(this.data)
+  },
+  blob() {
+    return Promise.resolve(this.data)
+  },
+  formData() {
+    return Promise.resolve(this.data)
+  },
+  text() {
+    return Promise.resolve(this.data)
+  },
+  arrayBuffer() {
+    return Promise.resolve(this.data)
+  },
+}
 
+test('method: check', t => {
   t.is(typeof check, 'function', 'is defined and is a function')
-  t.is(check(resp), 'json', 'validade the response and return "json"')
-  t.is(check(resp, 'blob'), 'blob', 'validade the response and return "blob"')
-  t.is(check(resp, 'formData'), 'formData', 'validade the response and return "formData"')
-  t.is(check(resp, 'text'), 'text', 'validade the response and return "text"')
-  t.is(check(resp, 'arrayBuffer'), 'arrayBuffer', 'validade the response and return "arrayBuffer"')
+  t.is(typeof check(resp), 'object', 'validade the response and return a object')
+  t.is(typeof check(resp), 'object', 'validade the response and return a object')
+  t.is(typeof check(resp, 'blob'), 'object', 'validade the response and return a object')
+  t.is(typeof check(resp, 'formData'), 'object', 'validade the response and return a object')
+  t.is(typeof check(resp, 'text'), 'object', 'validade the response and return a object')
+  t.is(typeof check(resp, 'arrayBuffer'), 'object', 'validade the response and return a object')
+
+  return check(resp).then(response => {
+    t.is(typeof response.data, 'object', 'return the data object')
+    t.is(response.status, 200, 'return the status')
+    t.is(response.statusText, 'Ok', 'return the statusText')
+    t.is(typeof response.headers, 'object', 'return the headers object')
+  })
 })
+
+test('method: check', t => {
+    const error = t.throws(() => {
+        check(resp, 'invalidData')
+    }, Error);
+
+    t.is(error.message, 'Invalid data type')
+});

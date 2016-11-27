@@ -4,7 +4,7 @@
 
 ```js
 fitch.get(apiUrl, config)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 **Note:** GET method doesn't allow `body` inside config object.
@@ -15,7 +15,7 @@ fitch.get(apiUrl, config)
 const req = { body: { name: 'Happy cat' } }
 
 fitch.post(apiUrl, req)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 **put(url, config)**
@@ -24,7 +24,7 @@ fitch.post(apiUrl, req)
 const req = { body: { name: 'Happy cat' } }
 
 fitch.put(apiUrl, req)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 **patch(url, config)**
@@ -33,14 +33,14 @@ fitch.put(apiUrl, req)
 const req = { body: { name: 'Happy cat' } }
 
 fitch.patch(apiUrl, req)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 **del(url, config)**
 
 ```js
 fitch.del(apiUrl)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
 ```
 
 ## Concurrency
@@ -67,7 +67,7 @@ If Fetch throws an error, we can handle this using `catch()`:
 
 ```js
 fitch.get(apiUrl)
-  .then(data => console.log(data))
+  .then(response => console.log(response))
   .catch(err => console.error(err))
 ```
 
