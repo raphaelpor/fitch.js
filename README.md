@@ -11,6 +11,7 @@ A lightweight Promise based HTTP client, using Fetch API.
 [![bitHound Overall Score](https://www.bithound.io/github/raphaelpor/fitch.js/badges/score.svg)](https://www.bithound.io/github/raphaelpor/fitch.js)
 [![bitHound Dependencies](https://www.bithound.io/github/raphaelpor/fitch.js/badges/dependencies.svg)](https://www.bithound.io/github/raphaelpor/fitch.js/master/dependencies/npm)
 [![bitHound Code](https://www.bithound.io/github/raphaelpor/fitch.js/badges/code.svg)](https://www.bithound.io/github/raphaelpor/fitch.js)
+[![Gitter](https://badges.gitter.im/join_chat.svg)](https://gitter.im/fitch-js/Lobby)
 
 ## Features
 
