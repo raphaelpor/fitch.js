@@ -1,6 +1,14 @@
 # Methods available:
 
-**get(url, config)**
+## **get(url, config)**
+### Params
+- **url**
+  - Type: `string`
+  - *Required*
+
+- **config**
+  - Type: `object`
+
 
 ```js
 fitch.get(apiUrl, config)
@@ -9,7 +17,15 @@ fitch.get(apiUrl, config)
 
 **Note:** GET method doesn't allow `body` inside config object.
 
-**post(url, config)**
+## **post(url, config)**
+### Params
+- **url**
+  - Type: `string`
+  - *Required*
+
+- **config**
+  - Type: `object`
+  - *Required*
 
 ```js
 const req = { body: { name: 'Happy cat' } }
@@ -18,7 +34,15 @@ fitch.post(apiUrl, req)
   .then(response => console.log(response))
 ```
 
-**put(url, config)**
+## **put(url, config)**
+### Params
+- **url**
+  - Type: `string`
+  - *Required*
+
+- **config**
+  - Type: `object`
+  - *Required*
 
 ```js
 const req = { body: { name: 'Happy cat' } }
@@ -27,7 +51,15 @@ fitch.put(apiUrl, req)
   .then(response => console.log(response))
 ```
 
-**patch(url, config)**
+## **patch(url, config)**
+### Params
+- **url**
+  - Type: `string`
+  - *Required*
+
+- **config**
+  - Type: `object`
+  - *Required*
 
 ```js
 const req = { body: { name: 'Happy cat' } }
@@ -36,16 +68,27 @@ fitch.patch(apiUrl, req)
   .then(response => console.log(response))
 ```
 
-**del(url, config)**
+## **del(url, config)**
+### Params
+- **url**
+  - Type: `string`
+  - *Required*
+
+- **config**
+  - Type: `object`
 
 ```js
 fitch.del(apiUrl)
   .then(response => console.log(response))
 ```
 
-## Concurrency
+# Concurrency
 
-**all(iterable)**
+## **all(iterable)**
+### Params
+- **iterable**
+  - Type: `array`
+  - *Required*
 
 `all()` is a helper function for dealing with concurrent requests.
 
@@ -62,7 +105,7 @@ fitch.all([ reqDogs, reqCats ])
   .then(doSomething)
 ```
 
-## Handling errors
+# Handling errors
 If Fetch throws an error, we can handle this using `catch()`:
 
 ```js

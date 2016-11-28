@@ -4,7 +4,7 @@ Fitch.js allows you to use a custom configuration for your requests. You just ne
 
 ## Options
 
-### **body** *(object)*
+### **body** `object`
 
 Receives a json object, that is transformed to string by Fitch.js, before send the request.
 
@@ -17,7 +17,7 @@ fitch.post(apiUrl, req)
   .then(response => console.log(response))
 ```
 
-### **dataType** *(string)*
+### **dataType** `string`
 
 Returns a parsed data of the type you need.
 
@@ -42,7 +42,7 @@ fitch.get('file.json')
   .then(response => console.log(response))
 ```
 
-### **params** *(object)*
+### **params** `object`
 
 You don't need to pass your URL parameters as string. Fitch.js allows you to pass the parameters inside a object:
 
@@ -58,7 +58,7 @@ fitch.get(apiUrl, config)
   .then(response => console.log(response))
 ```
 
-### **raw** *(boolean)*
+### **raw** `boolean`
 
 Returns the raw output of Fetch API, so you can work with headers.
 
