@@ -23,7 +23,10 @@ A lightweight Promise based HTTP client, using Fetch API.
 
 ## Get started
 
-[Read the full Documentation](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
+* [Documentation](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
+  * [Get started](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
+  * [Methods available](https://github.com/raphaelpor/fitch.js/blob/master/docs/Methods.md)
+  * [Configuration](https://github.com/raphaelpor/fitch.js/blob/master/docs/Config.md)
 
 ### Install
 ```sh

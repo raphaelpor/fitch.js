@@ -1,4 +1,4 @@
-# Methods available:
+# Methods available
 
 ## **get(url, config)**
 ### Params
