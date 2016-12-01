@@ -1,6 +1,13 @@
 # Métodos disponíveis:
 
-**get(url, config)**
+## **get(url, config)**
+### Parâmetros
+- **url**
+  - Tipo: `string`
+  - *Obrigatório*
+
+- **config**
+  - Tipo: `object`
 
 ```js
 fitch.get(apiUrl, config)
@@ -9,7 +16,15 @@ fitch.get(apiUrl, config)
 
 **Note:** O método GET  não permite `body` dentro do objeto de configuração.
 
-**post(url, config)**
+## **post(url, config)**
+### Parâmetros
+- **url**
+  - Tipo: `string`
+  - *Obrigatório*
+
+- **config**
+  - Tipo: `object`
+  - *Obrigatório*
 
 ```js
 const req = { body: { name: 'Happy cat' } }
@@ -18,7 +33,15 @@ fitch.post(apiUrl, req)
   .then(response => console.log(response))
 ```
 
-**put(url, config)**
+## **put(url, config)**
+### Parâmetros
+- **url**
+  - Tipo: `string`
+  - *Obrigatório*
+
+- **config**
+  - Tipo: `object`
+  - *Obrigatório*
 
 ```js
 const req = { body: { name: 'Happy cat' } }
@@ -27,7 +50,15 @@ fitch.put(apiUrl, req)
   .then(response => console.log(response))
 ```
 
-**patch(url, config)**
+## **patch(url, config)**
+### Parâmetros
+- **url**
+  - Tipo: `string`
+  - *Obrigatório*
+
+- **config**
+  - Tipo: `object`
+  - *Obrigatório*
 
 ```js
 const req = { body: { name: 'Happy cat' } }
@@ -36,16 +67,27 @@ fitch.patch(apiUrl, req)
   .then(response => console.log(response))
 ```
 
-**del(url, config)**
+## **del(url, config)**
+### Parâmetros
+- **url**
+  - Tipo: `string`
+  - *Obrigatório*
+
+- **config**
+  - Tipo: `object`
 
 ```js
 fitch.del(apiUrl)
   .then(response => console.log(response))
 ```
 
-## Concurrency
+# Concurrency
 
-**all(iterable)**
+## **all(iterable)**
+### Parâmetros
+- **iterable**
+  - Tipo: `array`
+  - *Obrigatório*
 
 `all()` é um função para lidar com requests simultâneos.
 
@@ -63,7 +105,7 @@ fitch.all([ reqDogs, reqCats ])
 ```
 
 
-## Manipulando erros
+# Manipulando erros
 Se houver um erro na chamada do Fetch, você pode pegá-lo usando `catch()`:
 
 ```js
@@ -72,4 +114,4 @@ fitch.get(apiUrl)
   .catch(err => console.error(err))
 ```
 
-**Next: [Veja como personalizar seus requests](https://github.com/raphaelpor/fitch.js/blob/master/docs/pt-br/Config.md).**
+### **Próximo: [Veja como personalizar seus requests](https://github.com/raphaelpor/fitch.js/blob/master/docs/pt-br/Config.md).**

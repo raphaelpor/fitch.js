@@ -4,7 +4,7 @@ Fitch.js permite usar configurações para personalizar seus requests. É necess
 
 ## Opções
 
-### **body** *(objeto)*
+### **body** `object`
 
 Recebe um objeto json, que é transformado para string antes fazer a chamada.
 
@@ -17,7 +17,7 @@ fitch.post(apiUrl, req)
   .then(response => console.log(response))
 ```
 
-### **dataType** *(string)*
+### **dataType** `string`
 
 Retorna os dados Returns a parsed data of the type you need.
 
@@ -42,7 +42,7 @@ fitch.get('file.json')
   .then(response => console.log(response))
 ```
 
-### **params** *(objeto)*
+### **params** `object`
 
 Não é necessário passar os parâmetros de URL, como string. O Fitch.js permite que sejam passados or meio do objeto `params`.
 
@@ -58,7 +58,7 @@ fitch.get(apiUrl, config)
   .then(response => console.log(response))
 ```
 
-### **raw** *(boolean)*
+### **raw** `boolean`
 
 Retorna a resposta pura do Fetch API, que permite trabalhar com os headers.
 

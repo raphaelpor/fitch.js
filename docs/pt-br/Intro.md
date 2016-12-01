@@ -39,4 +39,4 @@ Também é possível usar o CDN:
 <script src="https://unpkg.com/fitch/dist/index.umd.min.js"></script>
 ```
 
-**Próximo: [Aprenda sobre os métodos disponíveis](https://github.com/raphaelpor/fitch.js/blob/master/docs/pt-br/Methods.md).**
+### **Próximo: [Aprenda sobre os métodos disponíveis](https://github.com/raphaelpor/fitch.js/blob/master/docs/pt-br/Methods.md).**

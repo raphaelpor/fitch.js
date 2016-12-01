@@ -114,4 +114,4 @@ fitch.get(apiUrl)
   .catch(err => console.error(err))
 ```
 
-**Next: [Learn about custom configuration](https://github.com/raphaelpor/fitch.js/blob/master/docs/Config.md).**
+### **Next: [Learn about custom configuration](https://github.com/raphaelpor/fitch.js/blob/master/docs/Config.md).**
