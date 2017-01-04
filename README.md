@@ -47,10 +47,16 @@ import fitch from 'fitch'
 const fitch = require('fitch')
 ```
 
-**UMD:**
+**CDN:**
 
+unpkg
 ```html
 <script src="https://unpkg.com/fitch/dist/index.umd.min.js"></script>
+```
+
+jsDelivr
+```html
+<script src="https://cdn.jsdelivr.net/g/fitch.js"></script>
 ```
 
 ### Make your first request:
