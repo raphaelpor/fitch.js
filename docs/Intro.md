@@ -37,8 +37,14 @@ fitch.get(apiUrl)
 
 Also, you can use cdn:
 
+unpkg
 ```html
 <script src="https://unpkg.com/fitch/dist/index.umd.min.js"></script>
+```
+
+jsDelivr
+```html
+<script src="https://cdn.jsdelivr.net/g/fitch.js"></script>
 ```
 
 ### **Next: [Learn about the methods available](https://github.com/raphaelpor/fitch.js/blob/master/docs/Methods.md).**
