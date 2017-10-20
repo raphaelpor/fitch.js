@@ -1,14 +1,14 @@
 export default function createConfig(method, {
-    body,
-    cache = 'default',
-    credentials,
-    headers = { 'Content-Type': 'application/json' },
-    integrity,
-    mode = 'cors',
-    redirect,
-    referrer,
-    referrerPolicy,
-  } = {}) {
+  body,
+  cache = 'default',
+  credentials,
+  headers = { 'Content-Type': 'application/json' },
+  integrity,
+  mode = 'cors',
+  redirect,
+  referrer,
+  referrerPolicy,
+} = {}) {
   let data;
 
   if (body) {

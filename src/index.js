@@ -27,9 +27,9 @@ function intializer(rqst) {
   }
 
   function init({
-      config = {},
-      interceptor = promise => promise,
-    } = {}) {
+    config = {},
+    interceptor = promise => promise,
+  } = {}) {
     const customRqst = (method, url, req) => (
       request(method, url, merge({}, config, req))
         .then(interceptor)
