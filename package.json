@@ -20,7 +20,8 @@
   "homepage": "https://github.com/raphaelpor/fitch.js#readme",
   "main": "dist/index.js",
   "dependencies": {
-    "fetch-everywhere": "^1.0.5"
+    "fetch-everywhere": "^1.0.5",
+    "lodash.merge": "^4.6.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
