@@ -23,10 +23,10 @@ A lightweight Promise based HTTP client, using Fetch API.
 
 ## Get started
 
-* [Documentation](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
-  * [Get started](https://github.com/raphaelpor/fitch.js/blob/master/docs/Intro.md)
-  * [Methods available](https://github.com/raphaelpor/fitch.js/blob/master/docs/Methods.md)
-  * [Configuration](https://github.com/raphaelpor/fitch.js/blob/master/docs/Config.md)
+* [Documentation](https://github.com/raphaelpor/fitch.js/wiki)
+  * [Get started](https://github.com/raphaelpor/fitch.js/wiki)
+  * [Methods available](https://github.com/raphaelpor/fitch.js/wiki/Methods-available)
+  * [Configuration](https://github.com/raphaelpor/fitch.js/wiki/Configuration)
 
 ### Install
 ```sh
@@ -163,10 +163,11 @@ Read the [Code of conduct](https://github.com/raphaelpor/fitch.js/blob/master/co
 
 First yout need to fork this repository. Then:
 ```sh
-npm i # install local dependencies
-npm start # run local server
-npm run watch:test # watch files inside src/ and tests/
-npm run examples # run examples
+yarn # install local dependencies
+yarn start # run local server
+yarn watch:test # watch files inside src/ and tests/
+yarn build # run examples
+yarn examples # run examples
 ```
 Note: Your code must be tested and pass in linter check.
 You can verify your code with ESLint, using `npm run lint`.

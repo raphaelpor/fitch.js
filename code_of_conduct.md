@@ -1,6 +1,6 @@
 # Contributor Covenant Code of Conduct
 
-Translations: [Português](https://github.com/raphaelpor/fitch.js/blob/master/docs/pt-br/code_of_conduct.md).
+Translations: [Português](https://github.com/raphaelpor/fitch.js/blob/master/docs_pt-br/code_of_conduct.md).
 
 ## Our Pledge
 
