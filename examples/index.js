@@ -1,5 +1,9 @@
 const fitch = require('../dist');
 
+const log = (...args) => { console.log('\x1b[32m%s\x1b[0m', ...args); }
+
+const logError = (err) => { console.log('\x1b[31m%s\x1b[31m', err); }
+
 const baseUrl = 'http://localhost:8000/cats';
 
 const reqGet = {
@@ -17,48 +21,57 @@ const reqPost = {
   body: { name: 'New cat' },
 };
 
-function logError(err) {
-  console.log(err);
-}
+const fetchWrapper = fitch.init({
+  config: { raw: true },
+  interceptor: (response) => {
+    log('interceptor\t>>>', response.ok);
+    return response.json();
+  },
+});
 
-// all
-fitch.all([fitch.get(baseUrl), fitch.get(baseUrl, { raw: true })])
-  .then(([x, y]) => {
-    console.log('x\t>>>', x);
-    console.log('y\t>>>', y);
-  });
+// GET with interceptor
+fetchWrapper.get(baseUrl).then(data =>
+  log('GET with interceptor\t>>>', data)
+).catch(logError);
 
 // GET
 fitch.get(baseUrl).then(resp =>
-  console.log('GET\t>>>', resp.data)
+  log('GET\t>>>', resp.data)
 ).catch(logError);
 
 // GET with params
 fitch.get(baseUrl, reqGet).then(resp =>
-  console.log('GET\t>>>', resp.data)
+  log('GET\t>>>', resp.data)
 ).catch(logError);
 
 // GET raw output
 fitch.get(baseUrl, { raw: true }).then(resp =>
-  console.log('GET\t>>>', resp)
+  log('GET\t>>>', resp.status)
 ).catch(logError);
 
 // POST
 fitch.post(`${baseUrl}/new/`, reqPost).then(resp =>
-  console.log('POST\t>>>', resp.data)
+  log('POST\t>>>', resp.data)
 ).catch(logError);
 
 // PUT
 fitch.put(`${baseUrl}/1`, reqUpdate).then(resp =>
-  console.log('PUT\t>>>', resp.data)
+  log('PUT\t>>>', resp.data)
 ).catch(logError);
 
 // PATCH
 fitch.patch(`${baseUrl}/2`, reqUpdate).then(resp =>
-  console.log('PATCH\t>>>', resp.data)
+  log('PATCH\t>>>', resp.data)
 ).catch(logError);
 
 // DELETE
 fitch.del(`${baseUrl}/2`).then(resp =>
-  console.log('DELETE\t>>>', resp.data)
+  log('DELETE\t>>>', resp.data)
 ).catch(logError);
+
+// all
+fitch.all([fitch.get(baseUrl), fitch.get(baseUrl, { raw: true })])
+  .then(([x, y]) => {
+    log('response 1\t>>>', x.data);
+    log('response 2\t>>>', y.status);
+  });
