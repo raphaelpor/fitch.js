@@ -97,3 +97,5 @@ Personalize seus requests com as opções nativas do Fetch:
 **referrer** - [Veja mais em MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
 
 **referrerPolicy** - [Veja mais em MDN](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
+
+### **Próximo: [Veja como criar uma configuração padrão e interceptar requests](https://github.com/raphaelpor/fitch.js/blob/master/docs_pt-br/default_configuration.md).**

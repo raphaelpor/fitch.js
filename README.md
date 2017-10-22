@@ -27,6 +27,7 @@ A lightweight Promise based HTTP client, using Fetch API.
   * [Get started](https://github.com/raphaelpor/fitch.js/wiki)
   * [Methods available](https://github.com/raphaelpor/fitch.js/wiki/Methods-available)
   * [Configuration](https://github.com/raphaelpor/fitch.js/wiki/Configuration)
+  * [Default Configuration and Request Interceptor](https://github.com/raphaelpor/fitch.js/wiki/Default-Configuration-and-Request-Interceptor)
 
 ### Install
 ```sh
@@ -147,6 +148,19 @@ function doSomething([ responseDogs, responseCats ]) {
 
 fitch.all([ reqDogs, reqCats ])
   .then(doSomething)
+```
+
+## Default Configuration and Request Interceptor
+
+```js
+const fetchWrapper = fitch.init({
+  config: { raw: true },
+  interceptor: response => response.json(),
+})
+
+fetchWrapper.get(baseUrl).then(data =>
+  console.log('GET with interceptor\t>>>', data)
+)
 ```
 
 ## Browser Support
