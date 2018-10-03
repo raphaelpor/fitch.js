@@ -1,7 +1,7 @@
 import merge from 'lodash.merge';
 import request from './utils/request';
 
-function intializer(rqst) {
+function initialize(rqst) {
   function get(url, req) {
     return rqst('GET', url, req);
   }
@@ -35,7 +35,7 @@ function intializer(rqst) {
         .then(interceptor)
     );
 
-    return intializer(customRqst);
+    return initialize(customRqst);
   }
 
   return {
@@ -49,7 +49,7 @@ function intializer(rqst) {
   };
 }
 
-const fitch = intializer(request);
+const fitch = initialize(request);
 
 export default fitch;
 
