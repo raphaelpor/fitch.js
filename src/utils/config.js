@@ -8,6 +8,7 @@ export default function createConfig(method, {
   redirect,
   referrer,
   referrerPolicy,
+  signal,
 } = {}) {
   let data;
 
@@ -24,6 +25,7 @@ export default function createConfig(method, {
     mode,
     redirect,
     referrer,
+    signal,
   };
 
   if (integrity) {
